@@ -22,7 +22,7 @@ int main(){
 	int a[100];
 	int n=100;
 	for(int i=0;i<n;i++){
-		a[i]=rand()%100;
+		a[i]=rand()%1000;
 	}
 	
 	QuickSort(a,0,n);

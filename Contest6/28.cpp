@@ -5,7 +5,7 @@ int n;
 int a[105];
 
 int main(){
-	
+	vector<int> b;
 	cin>>n;
 	for(int i=0;i<n;i++){
 		cin>>a[i];
@@ -20,11 +20,12 @@ int main(){
 		}
 		a[j+1]=key;
 		
+		b.push_back(key);
+		
+		for(int k=0;k<=b.size();k++){
+			cout<<a[k]<<" ";
+		}
 		cout<<endl;
-	}
-	
-	for(int i=0;i<n;i++){
-		cout<<a[i]<<" ";
 	}
 	
 }
