@@ -1,39 +1,40 @@
-#include<bits/stdc++.h> 
-using namespace std; 
+#include<bits/stdc++.h>
+using namespace std;
 
-int countMinReversals(string expr) 
-{ 
-    int len = expr.length(); 
-  
-    stack<char> s; 
-    for (int i=0; i<len; i++) 
-    { 
-        if (expr[i]==')' && !s.empty()) 
-        { 
-            if (s.top()=='(') 
-                s.pop(); 
-            else
-                s.push(expr[i]); 
-        } 
-        else
-            s.push(expr[i]); 
-    } 
-  
-    int red_len = s.size(); 
-  
-    int n = 0; 
-    while (!s.empty() && s.top() == '(') 
-    { 
-        s.pop(); 
-        n++; 
-    } 
-  
-    return (red_len/2 + n%2); 
-} 
-
-int main() 
-{ 
-   string expr = ")(())((("; 
-   cout << countMinReversals(expr); 
-   return 0; 
-} 
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		stack<char> stk;
+	
+		for(int i=0;i<s.size();i++){
+			if(s[i]=='(' || s[i]==')' && stk.size() ==0 ) stk.push(s[i]);
+			else if(s[i]==')'){
+				if(stk.top()=='(' && stk.size()>0) stk.pop();
+				else stk.push(s[i]);
+			}
+		}
+		
+		int d1=0,d2=0;
+		
+		while(!stk.empty()){
+			if(stk.top()=='('){
+				d1++;
+				stk.pop();
+			}
+			else {
+				d2++;
+				stk.pop();
+			};
+			
+		}
+		
+		int res = d1/2 + d2/2 + d1%2 + d2%2;
+		
+		cout<<res<<endl;
+	}
+	
+	return 0;
+}

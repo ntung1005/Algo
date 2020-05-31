@@ -21,7 +21,7 @@ int main(){
 				while(top!='('){
 					if(top=='+' || top=='-' || top=='*' || top=='/')
 						ok=false;
-					top stk.top();
+					top = stk.top();
 					stk.pop();
 				}
 				
@@ -33,6 +33,7 @@ int main(){
 		
 		if(ok) cout<<"Yes";
 		else cout<<"No";
+		cout<<endl;
 	}
 
 }
