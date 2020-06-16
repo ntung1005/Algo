@@ -3,7 +3,7 @@ using namespace std;
 
 struct node 
 { 
-    int val; 
+	int val; 
     int level; 
 }; 
 
@@ -45,7 +45,7 @@ int minOperations(int x, int y)
 
 int main() 
 { 
-int t;
+	int t;
 	cin>>t;
 	while(t--){
 		int x,y;
