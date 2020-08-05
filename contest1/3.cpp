@@ -23,7 +23,7 @@ void xu_ly(){
 			vt_min=j;
 		}
 	}	
-	swap(day[i],day[vt_min]);
+ 	swap(day[i],day[vt_min]);
 	int l=i+1,r=n;
 	while(l<=r){
 		swap(day[l],day[r]);

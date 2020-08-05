@@ -1,25 +1,55 @@
 #include<bits/stdc++.h>
-#include <string>
+
 using namespace std;
 
-string A,B;
+int chuyenSangNam(int k){
+	
+	int result=0;
+	int i=0;
+		
+	while(k>0){
+		
+		int duX = k%10;
+		if(duX==6){
+			duX=5;
+		}
+		
+		result = result + duX*pow(10,i);
+		
+		k = k/10;
+		i++;
+	}
+	
+	return result;
+}
+
+int chuyenSangSau(int k){
+	
+	int result=0;
+	int i=0;
+		
+	while(k>0){
+		
+		int duX = k%10;
+		if(duX==5){
+			duX=6;
+		}
+		
+		result = result + duX*pow(10,i);
+		
+		k = k/10;
+		i++;
+	}
+	
+	return result;
+}
 
 int main(){
+	
+	int A,B;
 	cin>>A>>B;
 	
-	for(int i=0;i<A.size();i++){
-		if(A[i]=='6'){
-			A[i]='5';
-		}
-	}
+	cout<<chuyenSangNam(A) + chuyenSangNam(B)<<" "<<chuyenSangSau(A) + chuyenSangSau(B);
 	
-	for(int i=0;i<B.size();i++){
-		if(B[i]=='6'){
-			B[i]='5';
-		}
-	}
-
-	
-
-
+	return 0;
 }

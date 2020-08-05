@@ -41,7 +41,7 @@ void next_division() {
 		}
 		if(S>0) {
 			k = k+1;
-			X[k] = S;2
+			X[k] = S;
 		}
 	}
 	else ok = false;

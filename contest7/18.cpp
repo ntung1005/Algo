@@ -49,6 +49,8 @@ int main(){
 		cin>>s;
 		s = InfixToPostFix();
 		
+		cout<<s<<endl;
+		
 		stack<long long> stk;
 		
 		for(int i=0;i<s.size();i++){
