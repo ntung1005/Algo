@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 #include<cmath>
-using namespce std;
+using namespace std;
 
 int tinh(int n,long long k){
 	if(k%2==1) return 1;
@@ -11,8 +11,9 @@ int tinh(int n,long long k){
 }
 int main(){
 	int n,t;
-	long long k;
+	cin>>t;
 	while(t--){
+		long long k;
 		cin>>n>>k;
 		cout<<tinh(n,k)<<endl;
 	}

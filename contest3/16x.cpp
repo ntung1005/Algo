@@ -10,11 +10,11 @@ void findNumberSmallest(long int d, long int s)
         return ; 
     } 
   
-    long int res[d]; 
+    long int res[d] = {0}; 
   
     s -= 1; 
   
-    for (int i=d-1; i>0; i--) 
+    for (int i=d-1; i>=0; i--) 
     { 
         if (s > 9) 
         { 
@@ -28,7 +28,7 @@ void findNumberSmallest(long int d, long int s)
         } 
     } 
   
-    res[0] = s + 1;  
+    res[0] += 1;  
   
     for (int i=0; i<d; i++) 
     	cout<<res[i];

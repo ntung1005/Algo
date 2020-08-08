@@ -8,7 +8,7 @@ struct dta{
 
 int Result(int a,int b){
 	set<int> s;
-	
+	  
 	s.insert(a);
 	queue<dta> q;
 	q.push({a,0});
